@@ -33,6 +33,18 @@
     
     responder.name = @"John";
     NSLog(@"name: %@", responder.name);
+
+    // Blocks
+
+    // returnType(^blockNameVariable)(parametersCommaSeparated) = ^returnType(parameters) {
+        // lines of code
+    //}
+    int (^addNumbers)(int a, int b) = ^int (int a, int b) {
+        return a + b;
+    };
+
+    int result = addNumbers(5, 6);
+    NSLog(@"addNumbers: %d", result);
 }
 
 
